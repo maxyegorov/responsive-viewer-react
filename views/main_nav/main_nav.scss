@@ -1,0 +1,170 @@
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    position: fixed; 
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+
+    line-height: 60px;
+    text-align: left;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    // transform: translate(0, -55px);
+    // transition: all 0.3s ease-in-out;
+
+    // &:hover {
+    //     transform: translate(0, 0px);
+    // }
+
+    .row {
+        margin: 0;
+    }
+
+    i {
+        cursor: pointer;
+    }
+    
+    .remove-window {
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        
+        font-size: 30px;
+        color: #ffffff;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        
+        transition: all 0.2s ease-in-out;
+        
+        &:active {
+            color: #bbbbbb;
+            
+            text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+        }
+    }
+    
+    .new-window {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        
+        font-size: 30px;
+        color: #ffffff;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            color: #bbbbbb;
+            
+            text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .fixed-left {
+        width: 140px;
+
+        text-align: center;
+
+        .logo {
+            max-width: 50px;
+            max-height: 50px;
+
+            margin-left: 10%;
+        }
+        
+        font-size: 22px;
+    }
+
+    .dynamic-middle {
+        width: calc(100% - 200px);
+        height: 100%;
+
+        input {
+            width: 100%;
+            height: 70%;
+            min-height: 70%;
+            max-height: 70%;
+
+            padding: 0 10px;
+
+            border: none;
+            border-radius: 5px;
+            background: #555555;
+        }
+    }
+
+    .fixed-right {
+        width: 60px;
+
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .settings-menu {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        margin: 0;
+
+        width: 100%;
+        max-width: 320px;
+        padding: 0;
+
+        background: rgba(0, 0, 0, 0.1);
+
+        list-style: none;
+
+        &>li {
+            margin: 0 0 2px 0;
+            height: 60px;
+
+            background: rgba(255, 255, 255, 0.1);
+
+            &.rv-presets {
+                overflow: auto;
+                max-height: 200px;
+                padding: 10px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                &>li {
+                    height: 40px;
+                    
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 70%;
+                min-height: 70%;
+                max-height: 70%;
+
+                padding: 0 10px;
+
+                border: none;
+                border-radius: 5px;
+                background: #555555;
+            }
+
+            button {
+                width: 100%;
+                height: 100%;
+
+                border: none;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

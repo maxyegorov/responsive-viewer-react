@@ -1,0 +1,36 @@
+@import "./main_nav/main_nav.scss";
+@import "./viewer_window/viewer_window.scss";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+
+    background: #333333 !important;
+}
+
+.responsive-viewer {
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 70px 0 0 0;
+
+    color: #ffffff;
+}
+
+.row-no-padding > div {
+    padding: 0;
+}
+
+.spin {
+    animation: spin 0.5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

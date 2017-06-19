@@ -1,0 +1,7 @@
+/node_modules
+bundle*
+style.css
+npm-debug.log
+.DS_Store
+**/.DS_Store
+/dist
