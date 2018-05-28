@@ -1,0 +1,85 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
+
+@import "./variables.scss";
+
+* {
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+
+  background: $rv-main-bg;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+.responsive-viewer {
+  width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 70px 0 0 0;
+
+  color: $rv-main-text;
+}
+
+.row-no-padding > div {
+  padding: 0;
+}
+
+.rv-button {
+  vertical-align: middle;
+
+  width: 90%;
+  height: 40px;
+
+  border: none;
+  border-radius: $rv-border-radius;
+  background: rgba(0, 0, 0, 0.2);
+
+  line-height: 30px;
+  font-size: 14px;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.input-error-message {
+  padding: 10px;
+  
+  text-align: center;
+  color: $rv-error-text;
+}
+
+.input-error-container {
+  background: $rv-error-bg;
+  color: $rv-error-text;
+}
+
+.spin {
+  animation: spin 0.5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

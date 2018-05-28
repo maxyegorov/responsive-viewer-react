@@ -1,57 +1,66 @@
 {
-  "name": "responsive-viewer-react",
-  "version": "0.0.1",
-  "description": "Tool for responsive layout testing",
-  "main": "entry.js",
-  "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxyegorov/responsive-viewer-react.git"
-  },
-  "keywords": [
-    "responsive",
-    "tester",
-    "viewer",
-    "design",
-    "layouts"
-  ],
-  "author": "Maxim Yegorov",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/maxyegorov/responsive-viewer-react/issues"
-  },
-  "homepage": "https://github.com/maxyegorov/responsive-viewer-react#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "autoprefixer-loader": "^3.2.0",
-    "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.26.1",
-    "file-loader": "^0.10.0",
-    "html-loader": "^0.4.4",
-    "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.5",
-    "react-router": "^3.0.2",
-    "react-router-redux": "^4.0.8",
-    "redux": "^3.6.0",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
-  }
+    "name": "responsive-viewer-react",
+    "version": "0.0.18",
+    "description": "Tool for responsive layout testing",
+    "main": "app/index.js",
+    "scripts": {
+        "start": "webpack --env.patch && ./node_modules/.bin/webpack-dev-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maxyegorov/responsive-viewer-react.git"
+    },
+    "keywords": [
+        "responsive",
+        "tester",
+        "viewer",
+        "design",
+        "layouts"
+    ],
+    "author": "Maxim Yegorov",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/maxyegorov/responsive-viewer-react/issues"
+    },
+    "homepage": "https://github.com/maxyegorov/responsive-viewer-react#readme",
+    "devDependencies": {
+        "autoprefixer": "^6.3.3",
+        "autoprefixer-loader": "^3.2.0",
+        "babel": "^6.23.0",
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.26.1",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-babel": "^5.1.0",
+        "eslint-plugin-import": "^2.12.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.8.2",
+        "file-loader": "^0.10.0",
+        "html-loader": "^0.4.4",
+        "node-sass": "^3.4.2",
+        "sass-loader": "^3.1.2",
+        "style-loader": "^0.13.0",
+        "webpack": "^2.6.1",
+        "webpack-dev-server": "^2.4.5"
+    },
+    "dependencies": {
+        "bootstrap-sass": "^3.3.7",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0",
+        "react-redux": "^5.0.5",
+        "react-router": "^3.0.2",
+        "react-router-redux": "^4.0.8",
+        "redux": "^3.6.0",
+        "redux-logger": "^3.0.6",
+        "redux-thunk": "^2.2.0",
+        "webpack-auto-inject-version": "^0.5.14"
+    }
 }

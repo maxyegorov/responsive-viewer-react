@@ -1,0 +1,81 @@
+@import "../variables.scss";
+
+.modal-window-bg {
+  z-index: 500;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  .modal-window {
+    position: relative;
+    margin-bottom: 10%;
+
+    // position: absolute;
+    // top: 0;
+    // bottom: 10%;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+
+    width: 80%;
+    max-width: 667px;
+    height: auto;
+    max-height: 480px;
+    padding: 20px;
+
+    border-radius: $rv-border-radius;
+
+    background: #ffffff;
+    box-shadow: 0px 24px 35px -10px rgba(0, 0, 0, 0.8);
+
+    line-height: 1.2;
+    color: $rv-modal-text;
+
+    animation: modal-in 0.3s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes modal-in {
+      from { opacity: 0; transform: scale(0, 0); }
+      to { opacity: 1; transform: scale(1, 1); }
+    }
+
+    &.closing {
+      animation: modal-out 0.5s;
+
+      @keyframes modal-out {
+        0% { opacity: 1; transform: scale(1, 1); }
+        70%, 100% { opacity: 0; transform: scale(0, 0); }
+      }
+    }
+
+    .modal-toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 10px;
+
+      font-weight: bold;
+      font-size: 18px;
+      color: #000000;
+
+      cursor: pointer;
+
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        color: #666666;
+      }
+    }
+  }
+}
