@@ -9,7 +9,14 @@ import {
   closeModal,
   saveWorkspace,
 } from '../../actions';
+
 import getTranslation from '../../common/getTranslation';
+import delayLookup from './methods/delayLookup';
+import urlChange from './methods/urlChange';
+import doRefresh from './methods/doRefresh';
+import toggleMenu from './methods/toggleMenu';
+import removeWindow from './methods/removeWindow';
+import saveCurrentWorkspace from './methods/saveCurrentWorkspace';
 
 import TranslateText from '../../components/TranslateText';
 import ModalWindow from '../modal_window/modal_window';
@@ -24,52 +31,12 @@ class MainNav extends Component {
       menuOpen: false,
     };
 
-    this.doRefresh = this.doRefresh.bind(this);
-    this.urlChange = this.urlChange.bind(this);
-    this.toggleMenu = this.toggleMenu.bind(this);
-    this.saveWorkspace = this.saveWorkspace.bind(this);
-  }
-
-  delayLookup() {
-    let currentValue = this.mainUrl.value;
-
-    setTimeout(() => {
-      if (currentValue === this.mainUrl.value) {
-        if (!currentValue.includes('http://') && !currentValue.includes('https://')) {
-          currentValue = `http://${currentValue}`;
-          this.mainUrl.value = currentValue;
-        }
-
-        this.props.updateWindowUrl(currentValue);
-      }
-    }, 500);
-  }
-
-  urlChange() {
-    if (this.mainUrl.value.includes('.')) this.delayLookup();
-  }
-
-  doRefresh() {
-    const currentValue = this.props.windows.mainUrl;
-
-    this.props.updateWindowUrl('');
-    setTimeout(() => {
-      this.props.updateWindowUrl(currentValue);
-    }, 500);
-  }
-
-  toggleMenu() {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }
-
-  removeWindow() {
-    console.log('removed');
-  }
-
-  saveWorkspace() {
-    this.props.saveWorkspace(this.workspaceName.value);
-
-    this.workspaceName.value = '';
+    this.doRefresh = doRefresh.bind(this);
+    this.urlChange = urlChange.bind(this);
+    this.toggleMenu = toggleMenu.bind(this);
+    this.saveWorkspace = saveCurrentWorkspace.bind(this);
+    this.delayLookup = delayLookup.bind(this);
+    this.removeWindow = removeWindow.bind(this);
   }
 
   render() {

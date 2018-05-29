@@ -104,13 +104,18 @@ class ViewerWindow extends Component {
       if (currentValue === this.windowUrl.value) {
         if (!currentValue.includes('http://') && !currentValue.includes('https://')) {
           currentValue = `http://${currentValue}`;
-          this.windowUrl.value = currentValue;
         }
+        this.windowUrl.value = currentValue;
+
+        const newWindow = this.props.windowProps;
+        newWindow.src = currentValue;
+        this.props.updateSingleWindow(newWindow, this.props.key);
       }
     }, 500);
   }
 
   urlChange() {
+    console.warn(this.windowUrl.value);
     if (this.windowUrl.value.indexOf('.') !== -1) this.delayLookup();
   }
 
