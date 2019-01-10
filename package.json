@@ -1,6 +1,6 @@
 {
     "name": "responsive-viewer-react",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "Tool for responsive layout testing",
     "main": "app/index.js",
     "scripts": {
@@ -72,6 +72,7 @@
         "redux": "^3.6.0",
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.2.0",
-        "webpack-auto-inject-version": "^0.5.14"
+        "webpack-auto-inject-version": "^0.5.14",
+        "webpack-dev-server": "^2.11.3"
     }
 }
